@@ -20,10 +20,6 @@ import java.util.TimerTask;
 public class UiController {
 
   @FXML
-  public Slider chassis_light;
-  @FXML
-  public Slider gimbal_light;
-  @FXML
   public Slider chassis_speed;
   @FXML
   public RadioButton gimbal_cam;
