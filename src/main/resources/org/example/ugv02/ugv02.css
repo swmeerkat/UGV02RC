@@ -1,0 +1,90 @@
+.root {
+  -fx-font-size: 14px;
+  -fx-font-family: sans-serif;
+  -fx-background-color: #777777;
+}
+
+Label {
+  -fx-text-fill: white;
+}
+
+.panel {
+  -fx-spacing: 15;
+  -fx-padding: 40 10 10 10;
+}
+
+.button-grid-section {
+  -fx-alignment: center;
+  -fx-padding: 0 0 10 0;
+}
+
+.button-grid-section VBox {
+  -fx-alignment: bottom-center
+ }
+
+.speed-box {
+  -fx-padding: 0 15 15 15
+}
+
+.speed-button {
+  -fx-padding: 8 0 8 0;
+  -fx-text-fill: white;
+}
+
+.speed-label {
+  -fx-padding: 5 0 0 0;
+}
+
+.button-grid {
+  -fx-background-radius: 5.0;
+  -fx-padding: 10 10 10 20;
+  -fx-hgap: 8;
+  -fx-vgap: 8;
+}
+
+.button-grid .button {
+  -fx-pref-width: 70;
+  -fx-pref-height: 70;
+  -fx-padding: 10;
+  -fx-background-color: #22bbff;
+  -fx-font-family: sans-serif;
+  -fx-font-size: 36;
+}
+
+.button-grid .button:pressed {
+  -fx-background-color: #44ddff;
+}
+
+.button-row {
+  -fx-spacing: 10;
+  -fx-alignment: bottom-center;
+  -fx-padding: 10 10 10 10;
+}
+
+.button-row button {
+  -fx-background-color: #DDDDDD;
+}
+
+.button-row .button:focused {
+  -fx-background-color: #22bbff;
+}
+
+.button-row .button:pressed {
+  -fx-background-color: #44ddff;
+}
+
+.toggle-button {
+  -fx-background-color: #777777;
+  -fx-text-fill: white;
+}
+
+#console {
+  -fx-min-height: 300;
+  -fx-min-width: 600;
+  -fx-background-color: #EEEEEE;
+  -fx-text-fill: green;
+}
+
+#console .content {
+ -fx-background-color: #EEEEEE;
+}
