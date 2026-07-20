@@ -14,7 +14,7 @@ public class UGV02Client {
     private static final String GIMBAL_CAMERA_PATH = "/gimbal/camera";
 
     @Getter
-    private final double DEFAULT_SPEED = 0.2;
+    private final double DEFAULT_SPEED = 0.25;
     private final JetsonOrinNanoClient jetson;
     @Getter
     private double speedLevel;

@@ -64,7 +64,7 @@
           </GridPane>
         </VBox>
         <VBox styleClass="speed-box">
-          <Slider fx:id="chassis_speed" orientation="VERTICAL"  maxWidth="70" minHeight="200" max="0.5" value="0.2" />
+          <Slider fx:id="chassis_speed" orientation="VERTICAL"  maxWidth="70" minHeight="200" min="0.25" max="0.5" />
           <Label styleClass="speed-label" text="Speed"/>
         </VBox>
       </HBox>
