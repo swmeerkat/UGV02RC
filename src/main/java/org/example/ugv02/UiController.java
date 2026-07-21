@@ -56,25 +56,25 @@ public class UiController {
     // gimbal upper left button
     @FXML
     public void gul_pressed() {
-        repeat_gimbal_cmd(-2, 2);
+        repeat_gimbal_cmd(-1, 1);
     }
 
     // gimbal upper middle button
     @FXML
     public void gum_pressed() {
-        repeat_gimbal_cmd(0, 2);
+        repeat_gimbal_cmd(0, 1);
     }
 
     // gimbal upper right button
     @FXML
     public void gur_pressed() {
-        repeat_gimbal_cmd(2, 2);
+        repeat_gimbal_cmd(1, 1);
     }
 
     // gimbal middle left button
     @FXML
     public void gml_pressed() {
-        repeat_gimbal_cmd(-2, 0);
+        repeat_gimbal_cmd(-1, 0);
     }
 
     // gimbal middle middle button
@@ -86,25 +86,25 @@ public class UiController {
     // gimbal middle right button
     @FXML
     public void gmr_pressed() {
-        repeat_gimbal_cmd(2, 0);
+        repeat_gimbal_cmd(1, 0);
     }
 
     // gimbal bottom left button
     @FXML
     public void gbl_pressed() {
-        repeat_gimbal_cmd(-2, -2);
+        repeat_gimbal_cmd(-1, -1);
     }
 
     // gimbal bottom middle button
     @FXML
     public void gbm_pressed() {
-        repeat_gimbal_cmd(0, -2);
+        repeat_gimbal_cmd(0, -1);
     }
 
     // gimbal bottom right button
     @FXML
     public void gbr_pressed() {
-        repeat_gimbal_cmd(2, -2);
+        repeat_gimbal_cmd(1, -1);
     }
 
     // chassis upper left button

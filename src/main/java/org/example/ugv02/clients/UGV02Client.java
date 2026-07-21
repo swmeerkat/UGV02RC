@@ -130,7 +130,7 @@ public class UGV02Client {
         } else if (new_tilt > 90) {
             new_tilt = 90;
         }
-        jetson.post(CMD_PATH, "{\"T\":133,\"X\":" + new_pan + ",\"Y\":" + new_tilt + ",\"SPD\":0,\"ACC\":0} ");
+        jetson.post(CMD_PATH, "{\"T\":134,\"X\":" + new_pan + ",\"Y\":" + new_tilt + ",\"SX\":500,\"SY\":500} ");
         actPan = new_pan;
         actTilt = new_tilt;
     }
