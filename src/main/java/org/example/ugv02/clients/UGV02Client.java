@@ -130,7 +130,7 @@ public class UGV02Client {
         } else if (new_tilt > 90) {
             new_tilt = 90;
         }
-        jetson.post(CMD_PATH, "{\"T\":134,\"X\":" + new_pan + ",\"Y\":" + new_tilt + ",\"SX\":500,\"SY\":500} ");
+        jetson.post(CMD_PATH, "{\"T\":134,\"X\":" + new_pan + ",\"Y\":" + new_tilt + ",\"SX\":500,\"SY\":500}");
         actPan = new_pan;
         actTilt = new_tilt;
     }
@@ -141,5 +141,20 @@ public class UGV02Client {
         } else {
             jetson.post(GIMBAL_CAMERA_PATH + "/off", gimbal_cam_pid);
         }
+    }
+
+    /*
+     * UGV02 IO4, IO5 command: {"T": 132, "IO4":255, "IO5":255}"
+     * on -> 255, off -> 0
+     * IO4: chassis light
+     */
+    public void switch_chassis_light(boolean chassis_on) {
+        String cmd;
+        if (chassis_on) {
+            cmd = "{\"T\":132,\"IO4\":255,\"IO5\":0}";
+        } else {
+            cmd = "{\"T\":132,\"IO4\":0,\"IO5\":0}";
+        }
+        jetson.post(CMD_PATH, cmd);
     }
 }

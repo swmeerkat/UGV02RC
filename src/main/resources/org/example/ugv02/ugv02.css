@@ -23,7 +23,7 @@ Label {
  }
 
 .speed-box {
-  -fx-padding: 0 15 15 15
+  -fx-padding: 0 15 15 0
 }
 
 .speed-button {
@@ -32,7 +32,7 @@ Label {
 }
 
 .speed-label {
-  -fx-padding: 5 0 0 0;
+  -fx-padding: 5 0 5 0;
 }
 
 .button-grid {
