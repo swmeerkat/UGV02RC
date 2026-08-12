@@ -78,10 +78,28 @@ Label {
   -fx-text-fill: white;
 }
 
+.ups-status-box {
+  -fx-alignment: center;
+  -fx-padding: 0 10 30 0;
+  -fx-spacing: 20;
+}
+
+.ups-status {
+  -fx-pref-column-count: 3;
+  -fx-font-size: 16px;
+  -fx-padding: 5 5 5 5;
+  -fx-alignment: center;
+  -fx-background-color: #EEEEEE;
+  -fx-text-fill: green;
+}
+
+.ups-status-label {
+  -fx-padding: 5 0 5 10;
+}
+
 #console {
   -fx-min-height: 300;
   -fx-min-width: 600;
-  -fx-background-color: #EEEEEE;
   -fx-text-fill: green;
 }
 

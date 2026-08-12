@@ -67,6 +67,27 @@
             </HBox>
             <Label text="Chassis"/>
         </VBox>
+            <VBox>
+                <VBox styleClass="ups-status-box">
+                    <HBox>
+                        <TextField fx:id="voltage" styleClass="ups-status" editable="false" text="12,56"/>
+                        <Label styleClass="ups-status-label" text="V"/>
+                    </HBox>
+                    <HBox>
+                        <TextField fx:id="current" styleClass="ups-status" editable="false" text="2,56"/>
+                        <Label styleClass="ups-status-label" text="A"/>
+                    </HBox>
+                    <HBox>
+                        <TextField fx:id="power" styleClass="ups-status" editable="false" text="10,89"/>
+                        <Label styleClass="ups-status-label" text="W"/>
+                    </HBox>
+                    <HBox>
+                        <TextField fx:id="percentage" styleClass="ups-status" editable="false" text="97"/>
+                        <Label styleClass="ups-status-label" text="\%"/>
+                    </HBox>
+                </VBox>
+                <Label text="UPS"/>
+            </VBox>
     </HBox>
 
     <TextArea fx:id="console" editable="false" VBox.vgrow="ALWAYS"/>

@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import lombok.Setter;
@@ -24,9 +25,17 @@ public class UiController {
     @FXML
     public RadioButton chassis_light;
     @FXML
-    public RadioButton gimbal_cam;
+    public TextField voltage;
+    @FXML
+    public TextField current;
+    @FXML
+    public TextField power;
+    @FXML
+    public TextField percentage;
     @FXML
     public TextArea console;
+    @FXML
+    public RadioButton gimbal_cam;
 
     @Setter
     private Stage stage;
