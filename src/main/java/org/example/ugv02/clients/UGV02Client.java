@@ -11,6 +11,7 @@ import lombok.Setter;
 public class UGV02Client {
 
     private static final String CMD_PATH = "/ugv02/cmd";
+    private static final String UPS_PATH = "/ups/status";
     private static final String GIMBAL_CAMERA_PATH = "/gimbal/camera";
 
     @Getter
@@ -156,5 +157,9 @@ public class UGV02Client {
             cmd = "{\"T\":132,\"IO4\":0,\"IO5\":0}";
         }
         jetson.post(CMD_PATH, cmd);
+    }
+
+    public JsonNode get_ups_status() {
+        return jetson.get(UPS_PATH);
     }
 }

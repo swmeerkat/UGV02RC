@@ -70,19 +70,19 @@
             <VBox>
                 <VBox styleClass="ups-status-box">
                     <HBox>
-                        <TextField fx:id="voltage" styleClass="ups-status" editable="false" text="12,56"/>
+                        <TextField fx:id="voltage" styleClass="ups-status" editable="false"/>
                         <Label styleClass="ups-status-label" text="V"/>
                     </HBox>
                     <HBox>
-                        <TextField fx:id="current" styleClass="ups-status" editable="false" text="2,56"/>
+                        <TextField fx:id="current" styleClass="ups-status" editable="false"/>
                         <Label styleClass="ups-status-label" text="A"/>
                     </HBox>
                     <HBox>
-                        <TextField fx:id="power" styleClass="ups-status" editable="false" text="10,89"/>
+                        <TextField fx:id="power" styleClass="ups-status" editable="false"/>
                         <Label styleClass="ups-status-label" text="W"/>
                     </HBox>
                     <HBox>
-                        <TextField fx:id="percentage" styleClass="ups-status" editable="false" text="97"/>
+                        <TextField fx:id="percentage" styleClass="ups-status" editable="false"/>
                         <Label styleClass="ups-status-label" text="\%"/>
                     </HBox>
                 </VBox>

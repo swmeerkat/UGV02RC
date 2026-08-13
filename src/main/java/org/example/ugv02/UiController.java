@@ -14,6 +14,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.example.ugv02.clients.MovingDirection;
 import org.example.ugv02.clients.UGV02Client;
 
+import java.math.RoundingMode;
+import java.text.NumberFormat;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -44,6 +46,7 @@ public class UiController {
     private KeyboardController keyboardController;
     private Timer gimbalTimer;
     private Timer chassisTimer;
+    private Timer upsStatusTimer;
 
 
     @FXML
@@ -54,6 +57,12 @@ public class UiController {
                 (_, _, newValue) ->
                         ugv02Client.setSpeedLevel(newValue.doubleValue()));
         Platform.runLater(() -> stage.setOnCloseRequest(_ -> exitApplication()));
+        upsStatusTimer = new Timer();
+        upsStatusTimer.scheduleAtFixedRate(new TimerTask() {
+            public void run() {
+                get_ups_status();
+            }
+        }, 0, 3000);
         ugv02Client.gimbal_middle_pos();
         log.info("UGV02 RC initialized");
     }
@@ -239,8 +248,24 @@ public class UiController {
         ugv02Client.cmd_speed_control(MovingDirection.STOP);
     }
 
+    private void get_ups_status() {
+        JsonNode response = ugv02Client.get_ups_status();
+        voltage.setText(format_ups_status(response.get("load_voltage").asDouble(), 2));
+        current.setText(format_ups_status(response.get("current").asDouble(), 2));
+        power.setText(format_ups_status(response.get("power").asDouble(), 1));
+        percentage.setText(format_ups_status(response.get("percentage").asDouble(), 0));
+    }
+
+    private String format_ups_status(double value, int fraction) {
+        NumberFormat nf = NumberFormat.getNumberInstance();
+        nf.setMaximumFractionDigits(fraction);
+        nf.setRoundingMode(RoundingMode.HALF_UP);
+        return nf.format(value);
+    }
+
     private void exitApplication() {
         chassis_released();
         gimbal_released();
+        upsStatusTimer.cancel();
     }
 }
