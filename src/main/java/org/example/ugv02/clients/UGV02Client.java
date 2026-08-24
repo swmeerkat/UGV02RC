@@ -120,10 +120,11 @@ public class UGV02Client {
      */
     public void gimbal_step(int delta_pan, int delta_tilt) {
         int new_pan = actPan + delta_pan;
-        if (new_pan < -180) {
-            new_pan = -180;
-        } else if (new_pan > 180) {
-            new_pan = 180;
+        // 100 degrees left and right due to modules behind the camera
+        if (new_pan < -100) {
+            new_pan = -100;
+        } else if (new_pan > 100) {
+            new_pan = 100;
         }
         int new_tilt = actTilt + delta_tilt;
         if (new_tilt < -30) {
