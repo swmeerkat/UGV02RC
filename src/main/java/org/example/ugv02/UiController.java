@@ -73,6 +73,12 @@ public class UiController {
         console.appendText(result + "\n");
     }
 
+    @FXML
+    public void getEnvironment() {
+        JsonNode result = ugv02Client.get_environment();
+        console.appendText(result + "\n");
+    }
+
     // gimbal upper left button
     @FXML
     public void gul_pressed() {

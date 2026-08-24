@@ -93,7 +93,9 @@
     <TextArea fx:id="console" editable="false" VBox.vgrow="ALWAYS"/>
 
     <HBox styleClass="button-row">
-        <Button text="Feedback" onAction="#getFeedback" onKeyPressed="#keyPressed"
+        <Button text="UGV feedback" onAction="#getFeedback" onKeyPressed="#keyPressed"
+                onKeyReleased="#keyReleased"/>
+        <Button text="Environment" onAction="#getEnvironment" onKeyPressed="#keyPressed"
                 onKeyReleased="#keyReleased"/>
         <Button text="Keyboard control" onAction="#enterKeyboardControl" onKeyPressed="#keyPressed"
                 onKeyReleased="#keyReleased"/>

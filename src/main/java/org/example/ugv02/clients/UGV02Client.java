@@ -12,6 +12,7 @@ public class UGV02Client {
 
     private static final String CMD_PATH = "/ugv02/cmd";
     private static final String UPS_PATH = "/ups/status";
+    private static final String ENV_PATH = "/env/status";
     private static final String GIMBAL_CAMERA_PATH = "/gimbal/camera";
 
     @Getter
@@ -57,6 +58,10 @@ public class UGV02Client {
      */
     public JsonNode get_feedback() {
         return jetson.post(CMD_PATH, "{\"T\":130}");
+    }
+
+    public JsonNode get_environment() {
+        return jetson.get(ENV_PATH);
     }
 
     /*
