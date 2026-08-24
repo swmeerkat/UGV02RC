@@ -67,7 +67,7 @@ public class UGV02Client {
     public void cmd_speed_control(MovingDirection direction) {
         double left = 0;
         double right = 0;
-        double reducedSpeed = speedLevel / 1.5;
+        double reducedSpeed = speedLevel / 4;
         switch (direction) {
             case NORTH -> {
                 left = speedLevel;
