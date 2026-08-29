@@ -256,10 +256,12 @@ public class UiController {
 
     private void get_ups_status() {
         JsonNode response = ugv02Client.get_ups_status();
-        voltage.setText(format_ups_status(response.get("load_voltage").asDouble(), 2));
-        current.setText(format_ups_status(response.get("current").asDouble(), 2));
-        power.setText(format_ups_status(response.get("power").asDouble(), 1));
-        percentage.setText(format_ups_status(response.get("percentage").asDouble(), 0));
+        if (!response.isEmpty()) {
+            voltage.setText(format_ups_status(response.get("load_voltage").asDouble(), 2));
+            current.setText(format_ups_status(response.get("current").asDouble(), 2));
+            power.setText(format_ups_status(response.get("power").asDouble(), 1));
+            percentage.setText(format_ups_status(response.get("percentage").asDouble(), 0));
+        }
     }
 
     private String format_ups_status(double value, int fraction) {

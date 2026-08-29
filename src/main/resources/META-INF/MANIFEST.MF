@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Main-Class: org.example.ugv02.Launcher
+Class-Path: slf4j-simple-2.0.17.jar javafx-base-26.0.1-mac-aarch64.jar j
+ avafx-graphics-26.0.1-mac-aarch64.jar lombok-1.18.42.jar jackson-databi
+ nd-2.22.0.jar javafx-graphics-26.0.1.jar javafx-base-26.0.1.jar javafx-
+ controls-26.0.1.jar slf4j-api-2.0.17.jar javafx-fxml-26.0.1-mac-aarch64
+ .jar httpclient5-5.4.4.jar jackson-core-2.22.0.jar httpclient5-fluent-5
+ .4.4.jar jackson-annotations-2.22.jar javafx-controls-26.0.1-mac-aarch6
+ 4.jar httpcore5-5.3.4.jar javafx-fxml-26.0.1.jar httpcore5-h2-5.3.4.jar
+
