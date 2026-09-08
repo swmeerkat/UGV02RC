@@ -25,7 +25,7 @@ public class UiController {
     @FXML
     public Slider chassis_speed;
     @FXML
-    public RadioButton chassis_light;
+    public Slider chassis_light;
     @FXML
     public TextField voltage;
     @FXML
@@ -56,6 +56,9 @@ public class UiController {
         chassis_speed.valueProperty().addListener(
                 (_, _, newValue) ->
                         ugv02Client.setSpeedLevel(newValue.doubleValue()));
+        chassis_light.valueProperty().addListener(
+                (_, _, newValue) ->
+                        ugv02Client.dim_chassis_light(newValue.intValue()));
         Platform.runLater(() -> stage.setOnCloseRequest(_ -> exitApplication()));
         upsStatusTimer = new Timer();
         upsStatusTimer.scheduleAtFixedRate(new TimerTask() {
@@ -205,11 +208,6 @@ public class UiController {
     @FXML
     public void gimbal_camera_switched() {
         ugv02Client.switch_gimbal_camera(gimbal_cam.isSelected());
-    }
-
-    @FXML
-    public void chassis_light_switched() {
-        ugv02Client.switch_chassis_light(chassis_light.isSelected());
     }
 
     private void repeat_gimbal_cmd(int delta_pan, int delta_tilt) {

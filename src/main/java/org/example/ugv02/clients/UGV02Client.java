@@ -155,13 +155,14 @@ public class UGV02Client {
      * on -> 255, off -> 0
      * IO4: chassis light
      */
-    public void switch_chassis_light(boolean chassis_on) {
+    public void dim_chassis_light(int chassis_light) {
         String cmd;
-        if (chassis_on) {
-            cmd = "{\"T\":132,\"IO4\":255,\"IO5\":0}";
-        } else {
-            cmd = "{\"T\":132,\"IO4\":0,\"IO5\":0}";
+        if (chassis_light < 0) {
+            chassis_light = 0;
+        } else if (chassis_light > 255) {
+            chassis_light = 255;
         }
+        cmd = "{\"T\":132,\"IO4\":" + chassis_light + ",\"IO5\":0}";
         jetson.post(CMD_PATH, cmd);
     }
 

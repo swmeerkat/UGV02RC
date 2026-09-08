@@ -57,12 +57,13 @@
                                 onMousePressed="#cbr_pressed" onMouseReleased="#chassis_released"/>
                     </GridPane>
                 </VBox>
-                <VBox styleClass="speed-box">
-                    <Slider fx:id="chassis_speed" orientation="VERTICAL" maxWidth="70" minHeight="170" min="0.25"
-                            max="0.5"/>
-                    <Label styleClass="speed-label" text="Speed"/>
-                    <RadioButton styleClass="toggle-button" fx:id="chassis_light" text="Light"
-                                 onAction="#chassis_light_switched"/>
+                <VBox styleClass="slider-box">
+                    <Slider fx:id="chassis_speed" styleClass="slider" min="0.25" max="0.5"/>
+                    <Label styleClass="slider-label" text="Speed"/>
+                </VBox>
+                <VBox styleClass="slider-box">
+                    <Slider fx:id="chassis_light" styleClass="slider" max="255"/>
+                    <Label styleClass="slider-label" text="Light"/>
                 </VBox>
             </HBox>
             <Label text="Chassis"/>

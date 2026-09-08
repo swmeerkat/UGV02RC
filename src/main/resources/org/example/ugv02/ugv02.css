@@ -22,16 +22,17 @@ Label {
   -fx-alignment: bottom-center
  }
 
-.speed-box {
-  -fx-padding: 0 15 15 0
+.slider-box {
+  -fx-padding: 0 15 10 0
 }
 
-.speed-button {
-  -fx-padding: 8 0 8 0;
-  -fx-text-fill: white;
+.slider {
+  -fx-orientation: vertical;
+  -fx-max-width: 70;
+  -fx-min-height: 200;
 }
 
-.speed-label {
+.slider-label {
   -fx-padding: 5 0 5 0;
 }
 
@@ -80,7 +81,7 @@ Label {
 
 .ups-status-box {
   -fx-alignment: center;
-  -fx-padding: 0 10 30 0;
+  -fx-padding: 0 10 40 10;
   -fx-spacing: 20;
 }
 
