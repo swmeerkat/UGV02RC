@@ -82,6 +82,12 @@ public class UiController {
         console.appendText(result + "\n");
     }
 
+    @FXML
+    public void getRearDistance() {
+        JsonNode result = ugv02Client.get_rear_distance();
+        console.appendText(result + "\n");
+    }
+
     // gimbal upper left button
     @FXML
     public void gul_pressed() {

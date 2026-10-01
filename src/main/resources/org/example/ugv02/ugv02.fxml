@@ -98,6 +98,8 @@
                 onKeyReleased="#keyReleased"/>
         <Button text="Environment" onAction="#getEnvironment" onKeyPressed="#keyPressed"
                 onKeyReleased="#keyReleased"/>
+        <Button text="Rear distance" onAction="#getRearDistance" onKeyPressed="#keyPressed"
+                onKeyReleased="#keyReleased"/>
         <Button text="Keyboard control" onAction="#enterKeyboardControl" onKeyPressed="#keyPressed"
                 onKeyReleased="#keyReleased"/>
         <RadioButton styleClass="toggle-button" fx:id="gimbal_cam" text="Gimbal camera"

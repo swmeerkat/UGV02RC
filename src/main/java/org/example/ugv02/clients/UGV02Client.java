@@ -13,6 +13,7 @@ public class UGV02Client {
     private static final String CMD_PATH = "/ugv02/cmd";
     private static final String UPS_PATH = "/ups/status";
     private static final String ENV_PATH = "/env/status";
+    private static final String REAR_DISTANCE_PATH = "/rear/distance";
     private static final String GIMBAL_CAMERA_PATH = "/gimbal/camera";
 
     @Getter
@@ -63,6 +64,8 @@ public class UGV02Client {
     public JsonNode get_environment() {
         return jetson.get(ENV_PATH);
     }
+
+    public JsonNode get_rear_distance() {return jetson.get(REAR_DISTANCE_PATH);}
 
     /*
      * CMD_SPEED_CTRL
